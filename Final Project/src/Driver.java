@@ -3,7 +3,6 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
-		int x = 9;
 		BankOfWentworthAccount account = new BankOfWentworthAccount();
 		BankOfWentworthChecking checking = new BankOfWentworthChecking();
 		BankOfWentworthSavings savings = new BankOfWentworthSavings();
