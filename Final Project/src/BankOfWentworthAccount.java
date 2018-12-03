@@ -2,7 +2,7 @@
 public class BankOfWentworthAccount {
 	
 	
-	public int getAccountNumber(){
+	public int getAccountNumber(){	//random account number generator
 		
 		int accountNumber = 0;
 		
