@@ -1,5 +1,6 @@
-
+import java.text.DecimalFormat;
 public class BankOfWentworthChecking extends BankOfWentworthAccount{
+	DecimalFormat twoZeros = new DecimalFormat("0.00");
 	double checkingBalance = 0;
 	final int FEE = 39;
 	
@@ -17,10 +18,10 @@ public class BankOfWentworthChecking extends BankOfWentworthAccount{
 	}
 	public String getBalance(){
 		if (checkingBalance < 20) {
-			return("Warning! Low account balance: $" + checkingBalance);
+			return("Warning! Low account balance: $" + twoZeros.format(checkingBalance));
 		}
 		else {
-		return ("$" + checkingBalance);
+		return ("Your balance is $" + twoZeros.format(checkingBalance));
 		}
 	}
 }

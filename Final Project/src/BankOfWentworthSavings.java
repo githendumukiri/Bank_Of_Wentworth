@@ -1,5 +1,6 @@
-
+import java.text.DecimalFormat;
 public class BankOfWentworthSavings extends BankOfWentworthAccount {
+	DecimalFormat twoZeros = new DecimalFormat("0.00");
 	double savingsBalance = 0;
 	final double RATE = .05;
 	
@@ -17,10 +18,10 @@ public class BankOfWentworthSavings extends BankOfWentworthAccount {
 	public String getBalance() {
 		
 		if (savingsBalance < 20) {
-			return("Warning! Low account balance: $" + savingsBalance);
+			return("Warning! Low account balance: $" + twoZeros.format(savingsBalance));
 		}
 		else {
-		return ("$" + savingsBalance);
+		return ("Your balance is $" + twoZeros.format(savingsBalance));
 		}
 	}
 }
