@@ -5,11 +5,11 @@ public class BankOfWentworthSavings extends BankOfWentworthAccount {
 	final double RATE = .05;
 	
 	public void deposit(int depositAmount) {	//deposit method
-		savingsBalance += depositAmount;
+		savingsBalance = savingsBalance + depositAmount;
 		
 	}
 	public void withdraw(int withdrawlAmount) {	//withdraw method
-		savingsBalance -= withdrawlAmount;
+		savingsBalance = savingsBalance - withdrawlAmount;
 	}
 	public void annualPercentageYield(int years) {	//APY method
 		
@@ -17,7 +17,7 @@ public class BankOfWentworthSavings extends BankOfWentworthAccount {
 	}
 	public String getBalance() {	//getBalance method
 		
-		if (savingsBalance < 20) {
+		if (savingsBalance < 25) {
 			return("Warning! Low account balance: $" + twoZeros.format(savingsBalance));	//low account balance warning
 		}
 		else {

@@ -5,11 +5,11 @@ public class BankOfWentworthChecking extends BankOfWentworthAccount{
 	final int FEE = 39;
 	
 	public void deposit(int depositAmount) {	//deposit method
-		checkingBalance += depositAmount;
+		checkingBalance = checkingBalance + depositAmount;
 		
 	}
 	public void withdraw(int withdrawlAmount) {	//withdraw method
-		checkingBalance -= withdrawlAmount;
+		checkingBalance = checkingBalance - withdrawlAmount;
 	}
 	public void setAnnualFees(int years) {	//annual fee calculator
 		
@@ -17,11 +17,11 @@ public class BankOfWentworthChecking extends BankOfWentworthAccount{
 		
 	}
 	public String getBalance(){	//get balance method
-		if (checkingBalance < 20) {
+		if (checkingBalance < 25) {
 			return("Warning! Low account balance: $" + twoZeros.format(checkingBalance));	//low balance warning 
 		}
 		else {
-		return ("Your balance is $" + twoZeros.format(checkingBalance));
+			return ("Your balance is $" + twoZeros.format(checkingBalance));
 		}
 	}
 }
